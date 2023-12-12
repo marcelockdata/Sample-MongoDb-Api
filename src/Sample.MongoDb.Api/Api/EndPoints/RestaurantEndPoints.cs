@@ -37,7 +37,7 @@ public static class RestaurantEndPoints
         app.MapGet("/api/restaurants",
            static async (IMediator mediator,
                CancellationToken cancellationToken)
-         =>
+           =>
            {
                var output = await mediator.Send(new GetRestaurantAllInput(), cancellationToken);
                return Results.Ok(new ApiResponseList<GetRestaurantAllOutput>(output));
@@ -51,7 +51,7 @@ public static class RestaurantEndPoints
            static async (IMediator mediator,
                [FromRoute] string id,
                CancellationToken cancellationToken)
-          =>
+           =>
            {
                var output = await mediator.Send(new GetRestaurantInput(id), cancellationToken);
                return Results.Ok(new ApiResponse<GetRestaurantOutput>(output));
@@ -95,7 +95,7 @@ public static class RestaurantEndPoints
            static async (IMediator mediator,
                [FromQuery] string name,
                CancellationToken cancellationToken)
-          =>
+           =>
            {
                var output = await mediator.Send(new GetRestaurantNameInput(name), cancellationToken);
                return Results.Ok(new ApiResponseList<GetRestaurantNameOutput>(output));

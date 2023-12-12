@@ -10,5 +10,5 @@ public class RestaurantAssessmentModel
     public required string Id { get; set; }
     public double AvaregeStars { get; set; }
     public required List<RestaurantModel> Restaurant { get; set; }
-    public required List<AssessmentModel> Assessmens { get; set; }
+    public required List<AssessmentModel> Assessments { get; set; }
 }

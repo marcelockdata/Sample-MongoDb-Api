@@ -170,7 +170,7 @@ public class RestaurantRepository : IRestaurantRepository
 
             restaurant.AddAddress(address);
 
-            _.Assessmens.ForEach(a => restaurant.AddAssessment(a.MapToDomain()));
+            _.Assessments.ForEach(a => restaurant.AddAssessment(a.MapToDomain()));
 
             result.Add(restaurant, _.AvaregeStars);
         });
